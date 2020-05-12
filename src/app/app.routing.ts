@@ -30,6 +30,13 @@ export const routes: Routes = [{
       },
     },
     {
+      path: 'mytable',
+      loadChildren: () => import('./mytable/mytable.module').then(m => m.UiElementsModule),
+      data: {
+        title: 'UI Elements'
+      },
+    },
+    {
       path: 'forms',
       loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule),
       data: {
